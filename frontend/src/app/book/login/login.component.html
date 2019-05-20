@@ -1,0 +1,12 @@
+<h2 align="center">Login!</h2>
+<br/>
+<div class="container" align="center" ng-controller="TestCtrl">
+    <label for="userId"><b>UserId:</b></label>
+    <input #userId type="text" placeholder="Enter Username" name="userId" required>
+<br/><br/>
+    <label for="psw"><b>Password:</b></label>
+    <input #psw type="password" placeholder="Enter Password" name="psw" required>
+<br/><br/>
+     <button (click)="login(userId.value,psw.value)" type="button">Button</button>
+     </div>
+

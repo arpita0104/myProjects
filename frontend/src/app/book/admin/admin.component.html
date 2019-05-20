@@ -1,0 +1,30 @@
+<h2 align="center">Welcome  !</h2>
+<div class="container" align="center">
+    <table border="1" class="table table-striped">
+      <thead>
+          <tr>
+            <th style="width:130px">S.no</th>
+            <th style="width:130px">User ID</th>
+            <th style="width:130px">First Name</th>
+            <th style="width:130px">Last Name</th>
+            <th style="width:130px">Gender</th>
+            <th style="width:130px">Contact No</th>
+            <th style="width:130px">Action</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let guestdetail of guestlist">
+          <td>{{ guestdetail.userId }}</td>
+          <td>{{ guestdetail.firstName }}</td>
+          <td>{{ guestdetail.last_name }}</td>
+          <td>{{ guestdetail.lastName }}</td>
+          <td>{{ guestdetail.contactno }}</td>
+          <td>
+              <button (click)="approve(guestdetail.userId)" type="button">Approve</button>
+              <button (click)="reject(guestdetail.userId)" type="button">Reject</button>
+              <button (click)="edit(guestdetail)" type="button">Edit</button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
